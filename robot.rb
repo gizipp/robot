@@ -1,15 +1,4 @@
 class Robot
-  # def initialize(args)
-  #   @x = 0
-  #   @y = 0
-  #   @f = "NORTH"
-  #   place(@x, @y, @f)
-  # end
-
-  def pong
-    print "PONG"
-  end
-  
   def command(input)
     case input
       when "MOVE"
@@ -25,13 +14,14 @@ class Robot
     end
   end
 
-  private
   def place(x,y,f)
     @x = x.to_i
     @y = y.to_i
-    @f = z.to_s
+    @f = f.to_s
     print "Robot on the table!\n"
   end
+
+  private
   
   def move
      if @x > 3 || @y > 3
@@ -77,12 +67,11 @@ class Robot
   end
 
   def report
-      print @x, @y, @f
+      print "#{@x},#{@y},#{@f}\n"
   end
 end
 
-print "Command your robot:\n"
-input = gets.strip
 robot = Robot.new
-robot.pong
-robot.command(input)
+robot.place(0,0,"NORTH")
+robot.command("MOVE")
+robot.command("REPORT")
