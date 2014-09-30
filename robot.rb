@@ -72,6 +72,24 @@ class Robot
 end
 
 robot = Robot.new
-robot.place(0,0,"NORTH")
+
+# # Test robot(0) uncomment to test
+# robot.command("PING")
+
+# # Test robot(1) uncomment to test robot!
+# robot.place(0,0,"NORTH")
+# robot.command("MOVE")
+# robot.command("REPORT")
+
+# # Test robot(2) uncomment to test robot!
+# robot.place(0,0,"NORTH")
+# robot.command("LEFT")
+# robot.command("REPORT")
+
+# Test robot(3) uncomment to test robot!
+robot.place(1,2,"EAST")
+robot.command("MOVE")
+robot.command("MOVE")
+robot.command("LEFT")
 robot.command("MOVE")
 robot.command("REPORT")
