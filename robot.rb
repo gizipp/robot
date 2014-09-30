@@ -3,6 +3,7 @@ class Robot
     @x = 0
     @y = 0
     @f = "NORTH"
+    place(@x, @y, @f)
   end
 
   def command(input)
@@ -16,7 +17,7 @@ class Robot
       when "RIGHT"
         right
       when "PING"
-        print "PONG!"
+        print "PONG!\n"
     end
   end
 
@@ -72,17 +73,10 @@ class Robot
   end
 
   def report
-     # print @x, @y, @f
-     print "test"
+      print @x, @y, @f
   end
 end
 
 print "Command you robot:\n"
 input = gets.strip
 @robot.command(input)
-
-# robot = Robot.new
-# robot.command("PLACE,0,1,EAST")
-# robot.command("MOVE")
-# robot.command("LEFT")
-# robot.command("REPORT")
