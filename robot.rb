@@ -79,4 +79,5 @@ end
 
 print "Command your robot:\n"
 input = gets.strip
-@robot.command(input)
+puts "PONG"
+# @robot.command(input)
