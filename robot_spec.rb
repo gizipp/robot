@@ -37,3 +37,25 @@ describe "Robot assigned certain command and report" do
   robot.command("REPORT") == "3,3,NORTH"
   end
 end
+
+describe "Robot can't falling from the table" do
+  it "should be still on 4,4,EAST now" do
+    robot = Robot.new
+    robot.place(4,4,"EAST")
+    robot.command("MOVE")
+    robot.command("MOVE")
+    robot.command("MOVE")
+    robot.command("MOVE")
+    robot.command("REPORT") == "4,4,EAST"
+  end
+end
+
+describe "Robot turn left and right" do
+  it "should be still facing on EAST now" do
+    robot = Robot.new
+    robot.place(0,0,"EAST")
+    robot.command("LEFT")
+    robot.command("RIGHT")
+    robot.command("REPORT") == "4,4,EAST"
+  end
+end
