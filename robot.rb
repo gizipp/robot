@@ -5,6 +5,10 @@ class Robot
     @f = "NORTH"
   end
 
+  def command(input)
+    #command the robot
+  end
+
   private
   def place(x,y,f)
     @x = x.to_i
@@ -57,6 +61,10 @@ class Robot
   end
 
   def report
-     # robot, send the status!
+     print @x, @y, @f
   end
 end
+
+print "Command you robot:\n"
+input = gets.strip
+@robot.command(input)
