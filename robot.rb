@@ -5,7 +5,7 @@ class Robot
     @f = "NORTH"
   end
 
-  def self.command(input)
+  def command(input)
     case input
       when "MOVE"
         move
@@ -14,7 +14,9 @@ class Robot
       when "LEFT"
         left
       when "RIGHT"
-        right  
+        right
+      when "PING"
+        print "PONG!"
     end
   end
 
@@ -70,7 +72,8 @@ class Robot
   end
 
   def report
-     print @x, @y, @f
+     # print @x, @y, @f
+     print "test"
   end
 end
 
