@@ -1,12 +1,16 @@
 class Robot
-  def initialize(args)
-    @x = 0
-    @y = 0
-    @f = "NORTH"
-    place(@x, @y, @f)
-  end
+  # def initialize(args)
+  #   @x = 0
+  #   @y = 0
+  #   @f = "NORTH"
+  #   place(@x, @y, @f)
+  # end
 
-  def self.command(input)
+  def pong
+    print "PONG"
+  end
+  
+  def command(input)
     case input
       when "MOVE"
         move
@@ -79,5 +83,6 @@ end
 
 print "Command your robot:\n"
 input = gets.strip
-puts "PONG"
-# @robot.command(input)
+robot = Robot.new
+robot.pong
+robot.command(input)
