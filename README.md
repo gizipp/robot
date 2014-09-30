@@ -3,9 +3,7 @@ Robot Simulator
 This is Robot Simulator. The command is PLACE, MOVE, LEFT, RIGHT and REPORT.
 
 #Usage
-Open irb and load robot.rb and create object. The robot!
-
-To create the robot :
+Open irb and load robot.rb and create object. The robot! To create the robot :
 
 robot = Robot.new
 
@@ -27,9 +25,9 @@ robot.command("RIGHT") -> to face robot to the right
 
 robot.command("REPORT") -> to report the location status of the robot
 
-Test the robot with some cases. To add run default test case run this command :
+Test the robot with some cases. To run default test case run this command :
 
 spec rspec robot_spec.rb
 
-For more test case, ppen robot_spec.rb and add some test case for the robot. 
+For more test case, open robot_spec.rb and add some test case for the robot.
 
