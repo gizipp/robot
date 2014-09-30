@@ -5,7 +5,10 @@ class Robot
 
   private
   def place(x,y,z)
-     # placing the robot
+    @x = x.to_i
+    @y = y.to_i
+    @z = z.to_s
+    print "Robot on the table!\n"
   end
   
   def move
