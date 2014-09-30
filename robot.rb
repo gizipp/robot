@@ -25,7 +25,7 @@ class Robot
   
   def move
      if @x > 3 || @y > 3
-      print "Do not move, or robot falling from the table!\n"
+      print "Can't move, or robot falling from the table!\n"
       else
         case @f
           when "NORTH"
@@ -74,7 +74,7 @@ end
 robot = Robot.new
 
 # # Test robot(0) uncomment to test
-# robot.command("PING")
+robot.command("PING")
 
 # # Test robot(1) uncomment to test robot!
 # robot.place(0,0,"NORTH")
@@ -86,10 +86,18 @@ robot = Robot.new
 # robot.command("LEFT")
 # robot.command("REPORT")
 
-# Test robot(3) uncomment to test robot!
-robot.place(1,2,"EAST")
-robot.command("MOVE")
-robot.command("MOVE")
-robot.command("LEFT")
-robot.command("MOVE")
-robot.command("REPORT")
+# # Test robot(3) uncomment to test robot!
+# robot.place(1,2,"EAST")
+# robot.command("MOVE")
+# robot.command("MOVE")
+# robot.command("LEFT")
+# robot.command("MOVE")
+# robot.command("REPORT")
+
+# # Test robot(4) uncomment to test robot!
+# robot.place(2,3,"EAST")
+# robot.command("MOVE")
+# robot.command("MOVE")
+# robot.command("MOVE")
+# robot.command("MOVE")
+# robot.command("REPORT")
