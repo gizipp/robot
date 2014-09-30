@@ -5,8 +5,17 @@ class Robot
     @f = "NORTH"
   end
 
-  def command(input)
-    #command the robot
+  def self.command(input)
+    case input
+      when "MOVE"
+        move
+      when "REPORT"
+        report
+      when "LEFT"
+        left
+      when "RIGHT"
+        right  
+    end
   end
 
   private
@@ -68,3 +77,9 @@ end
 print "Command you robot:\n"
 input = gets.strip
 @robot.command(input)
+
+# robot = Robot.new
+# robot.command("PLACE,0,1,EAST")
+# robot.command("MOVE")
+# robot.command("LEFT")
+# robot.command("REPORT")
