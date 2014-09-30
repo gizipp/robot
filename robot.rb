@@ -6,7 +6,7 @@ class Robot
     place(@x, @y, @f)
   end
 
-  def command(input)
+  def self.command(input)
     case input
       when "MOVE"
         move
@@ -77,6 +77,6 @@ class Robot
   end
 end
 
-print "Command you robot:\n"
+print "Command your robot:\n"
 input = gets.strip
 @robot.command(input)

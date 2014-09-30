@@ -7,3 +7,5 @@ This is Robot Simulator. The command is PLACE, MOVE, LEFT, RIGHT and REPORT.
 Input is PLACE, MOVE, LEFT, RIGHT and REPORT
 
 In console run ruby robot.rb, input the command.
+
+PING the robot to test.
