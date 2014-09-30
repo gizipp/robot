@@ -2,7 +2,7 @@ class Robot
   def initialize(args)
     @x = 0
     @y = 0
-    @f = 0
+    @f = "NORTH"
   end
 
   private
@@ -17,25 +17,43 @@ class Robot
      if @x > 3 || @y > 3
       print "Do not move, or robot falling from the table!\n"
       else
-        case @y
-        when "NORTH"
-          @y += 1
-        when "EAST"
-          @x += 1
-        when "SOUTH"
-          @y -= 1
-        when "WEST"
-          @x -= 1
+        case @f
+          when "NORTH"
+            @y += 1
+          when "EAST"
+            @x += 1
+          when "SOUTH"
+            @y -= 1
+          when "WEST"
+            @x -= 1
         end
       end
   end
 
   def left
-    # robot, please turn left
+    case @f
+      when "NORTH"
+        @f = "WEST"
+      when "EAST"
+        @f = "NORTH"
+      when "SOUTH"
+        @f = "EAST"
+      when "WEST"
+        @f = "SOUTH"
+    end
   end
 
   def right
-     # robot, please turn right
+    case @f
+      when "NORTH"
+        @f = "EAST"
+      when "EAST"
+        @f = "SOUTH"
+      when "SOUTH"
+        @f = "WEST"
+      when "WEST"
+        @f = "NORTH"
+    end
   end
 
   def report
