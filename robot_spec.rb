@@ -1,8 +1,15 @@
 require 'rspec'
 require 'robot'
 
-describe "Robot PING" do
-  it "should say 'PONG! when the robot got ping" do
+describe "Robot placed on the table" do
+  it "should be on 0,0,NORTH now" do
+  robot = Robot.new
+  robot.command("REPORT") == "0,0,NORTH"
+  end
+end
+
+describe "Robot is ready" do
+  it "should say 'PONG!' when the robot got PING" do
   robot = Robot.new
   robot.command("PING") == "PONG!"
   end
@@ -47,6 +54,16 @@ describe "Robot can't falling from the table" do
     robot.command("MOVE")
     robot.command("MOVE")
     robot.command("REPORT") == "4,4,EAST"
+  end
+
+  it "should be still on 4,4,WEST now" do
+    robot = Robot.new
+    robot.place(0,0,"WEST")
+    robot.command("MOVE")
+    robot.command("MOVE")
+    robot.command("MOVE")
+    robot.command("MOVE")
+    robot.command("REPORT") == "0,0,WEST"
   end
 end
 

@@ -1,4 +1,10 @@
 class Robot
+  def initialize
+    @x = 0
+    @y = 0
+    @f = "NORTH"
+  end
+
   def command(input)
     case input
       when "MOVE"
@@ -24,20 +30,20 @@ class Robot
   private
   
   def move
-     if @x > 3 || @y > 3
-      print "Can't move, or robot falling from the table!\n"
-      else
-        case @f
-          when "NORTH"
-            @y += 1
-          when "EAST"
-            @x += 1
-          when "SOUTH"
-            @y -= 1
-          when "WEST"
-            @x -= 1
-        end
+    if @x.between?(1,5) || @y.between?(1,5)
+      case @f
+        when "NORTH"
+          @y += 1
+        when "EAST"
+          @x += 1
+        when "SOUTH"
+          @y -= 1
+        when "WEST"
+          @x -= 1
       end
+    else
+      print "Can't move, or robot falling from the table!\n"
+    end
   end
 
   def left
