@@ -29,7 +29,7 @@ robot.command("REPORT") -> to report the location of the robot
 Test the robot with some cases. To run default test case run this command :
 
 ```
-spec rspec robot_spec.rb
+rspec robot_spec.rb
 ```
 
 For more test case, open robot_spec.rb and add some test case for the robot.
